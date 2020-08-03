@@ -75,7 +75,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://sleepy-mesa-25878.herokuapp.com/imageurl', {
+      fetch('...YOUR DOMAIN NAME.../imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -85,7 +85,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://sleepy-mesa-25878.herokuapp.com/image', {
+          fetch('...YOUR DOMAIN NAME.../image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
